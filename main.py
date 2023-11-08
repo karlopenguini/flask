@@ -8,7 +8,7 @@ model = pickle.load(open('model.sav','rb'))
 @app.route('/')
 def index():
     return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
-@app.route('/predict', methods=["GET", "POST"])
+@app.route('/predict', methods=["POST"])
 def predict():
     
     data = request.json  # Get input data from the request
