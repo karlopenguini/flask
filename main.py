@@ -3,14 +3,14 @@ import pickle
 import os
 
 app = Flask(__name__)
-
+model = pickle.load(open('model.sav','rb'))
 
 @app.route('/')
 def index():
     return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
-@app.route('/predict')
+@app.route('/predict', methods=["GET", "POST"])
 def predict():
-    model = pickle.load(open('model.sav','rb'))
+    
     data = request.json  # Get input data from the request
     dict = {
         0:"Home Maintenance Enthusiasts",
