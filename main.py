@@ -21,8 +21,8 @@ def predict():
         5:"Elite & Well-Established Homeowners",
     }
 
-    print(model.predict([data['payload']]).reshape(-1)[0])
-    return jsonify({"predictedHomeowner":dict[0]})
+    
+    return jsonify({"predictedHomeowner":data})
 
 
 
