@@ -20,9 +20,7 @@ def predict():
         4:"Family-Centric Budgeters",
         5:"Elite & Well-Established Homeowners",
     }
-
-    print(data);
-    return jsonify({"predictedHomeowner":"TITE"})
+    return jsonify({"predictedHomeowner":dict[model.predict([data['payload']]).reshape(-1)[0]]})
 
 
 
