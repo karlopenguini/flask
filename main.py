@@ -22,7 +22,7 @@ def predict():
     }
 
     print(data);
-    return jsonify({"predictedHomeowner":dict[model.predict([data['payload']]).reshape(-1)[0]]})
+    return jsonify({"predictedHomeowner":"TITE"})
 
 
 
