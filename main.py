@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST', 'GET'])
 def predict():
     model = pickle.load(open('model.sav','rb'))
     data = request.json  # Get input data from the request
